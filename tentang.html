@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Penyesuaian Style agar Konsisten dengan Referensi Visual */
         body {
             background: linear-gradient(180deg, #F1F8E9 0%, #F4FBF7 100%);
             color: #4a5568;
@@ -50,7 +49,7 @@
             margin: 0 auto;
         }
 
-        /* Kartu Konten Utama (Gaya Box Putih Melengkung seperti di Gambar) */
+        /* Kartu Konten Standar */
         .content-card-box {
             background: #FFFFFF;
             border-radius: 24px;
@@ -76,32 +75,83 @@
             margin-bottom: 0;
         }
 
-        /* Grid untuk 2 Kolom atau 4 Pilar */
-        .grid-cards-2 {
+        /* LAYOUT 114: Nilai ISPARIVA (4 Kolom Jejer dengan Ikon Bulat di Atas) */
+        .grid-values-4 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin-top: 25px;
         }
-        .inner-sub-card {
-            background: #F8FBF9;
-            border: 1px solid #e2e8f0;
-            border-left: 5px solid #2e7d32;
-            padding: 22px;
+        .value-card-item {
+            background: #FFFFFF;
+            border: 1px solid #EAEAEA;
             border-radius: 16px;
-            transition: transform 0.2s;
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
         }
-        .inner-sub-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.03);
+        .value-icon-circle {
+            width: 50px;
+            height: 50px;
+            background: #E3F2FD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            color: #0288d1;
+            font-size: 1.2rem;
         }
-        .inner-sub-card h4 {
+        .value-card-item h4 {
+            color: #0d47a1;
+            font-size: 1.05rem;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        .value-card-item p {
+            font-size: 0.85rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* LAYOUT 224: Fokus Edukasi ISPARIVA (Grid 2x2 dengan Garis Hijau di Kiri) */
+        .grid-focus-2x2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+        .focus-card-item {
+            background: #FFFFFF;
+            border: 1px solid #EAEAEA;
+            border-left: 5px solid #2e7d32;
+            border-radius: 16px;
+            padding: 25px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+        .focus-icon-box {
+            width: 45px;
+            height: 45px;
+            background: #E8F5E9;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2e7d32;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .focus-card-item h4 {
             color: #0d47a1;
             font-size: 1.05rem;
             margin: 0 0 8px 0;
             font-weight: 700;
         }
-        .inner-sub-card p {
+        .focus-card-item p {
             font-size: 0.9rem;
             color: #666;
             margin: 0;
@@ -139,6 +189,52 @@
             color: #555;
             margin: 0;
             line-height: 1.4;
+        }
+
+        /* LAYOUT 444: Bersama ISPARIVA (Box Biru Lebar dengan Tombol Aksi) */
+        .together-box {
+            background: #1565C0;
+            border-radius: 24px;
+            padding: 45px 40px;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(21, 101, 192, 0.2);
+            margin-bottom: 35px;
+        }
+        .together-content {
+            max-width: 650px;
+        }
+        .together-content h3 {
+            color: #FFFFFF;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+        .together-content h4 {
+            color: #90CAF9;
+            font-size: 1.1rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .together-content p {
+            color: #E3F2FD;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .together-steps {
+            font-size: 0.9rem;
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+        .together-mascot {
+            text-align: center;
+            color: #90CAF9;
+            font-size: 0.85rem;
         }
 
         /* Grid Tim Perancang */
@@ -203,7 +299,7 @@
         }
         .linkedin-btn:hover { opacity: 0.85; }
 
-        /* Footer Sesuai Gambar Referensi */
+        /* Footer Rapi Sesuai Referensi (Hanya Instagram) */
         .new-footer {
             background: #FFFFFF;
             color: #333333;
@@ -220,6 +316,7 @@
             padding-bottom: 35px;
             border-bottom: 1px solid #EAEAEA;
             align-items: start;
+            text-align: left;
         }
         .footer-col h5 {
             color: #002d72;
@@ -239,6 +336,7 @@
             display: flex;
             gap: 10px;
             margin-top: 8px;
+            justify-content: flex-start;
         }
         .social-icon-btn {
             width: 40px;
@@ -265,6 +363,9 @@
         }
 
         @media (max-width: 768px) {
+            .grid-values-4 { grid-template-columns: 1fr; }
+            .grid-focus-2x2 { grid-template-columns: 1fr; }
+            .together-box { flex-direction: column; text-align: center; gap: 20px; }
             .footer-container { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
@@ -349,66 +450,88 @@
             </div>
         </div>
 
-        <!-- BOX 4: Fokus Edukasi ISPARIVA -->
+        <!-- BOX 4: Fokus Edukasi ISPARIVA (Disamakan seperti 224: Grid 2x2 dengan Ikon Kiri) -->
         <div class="content-card-box">
-            <span class="sub-tag" style="margin-bottom: 5px;">Pilar Utama</span>
-            <h3>Fokus Edukasi ISPARIVA</h3>
+            <span class="sub-tag" style="margin-bottom: 5px; display: block;">Pilar Utama</span>
+            <h3 style="margin-bottom: 20px;">Fokus Edukasi ISPARIVA</h3>
             
-            <div class="grid-cards-2">
-                <div class="inner-sub-card">
-                    <h4>Edukasi Kesehatan</h4>
-                    <p>Menyediakan informasi mengenai ISPA dengan bahasa yang sederhana dan mudah dipahami oleh seluruh lapisan masyarakat.</p>
+            <div class="grid-focus-2x2">
+                <div class="focus-card-item">
+                    <div class="focus-icon-box"><i class="fa-solid fa-book-medical"></i></div>
+                    <div>
+                        <h4>Edukasi Kesehatan</h4>
+                        <p>Menyediakan informasi mengenai ISPA dengan bahasa yang sederhana dan mudah dipahami oleh seluruh lapisan masyarakat.</p>
+                    </div>
                 </div>
-                <div class="inner-sub-card">
-                    <h4>Pencegahan</h4>
-                    <p>Mengajak masyarakat mengenali berbagai kebiasaan yang dapat membantu mengurangi risiko terkena maupun menularkan ISPA.</p>
+                <div class="focus-card-item">
+                    <div class="focus-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <h4>Pencegahan</h4>
+                        <p>Mengajak masyarakat mengenali berbagai kebiasaan yang dapat membantu mengurangi risiko terkena maupun menularkan ISPA.</p>
+                    </div>
                 </div>
-                <div class="inner-sub-card">
-                    <h4>Kesadaran Dini</h4>
-                    <p>Mendorong masyarakat agar tidak mengabaikan gejala dan lebih peduli terhadap kondisi kesehatan pernapasan.</p>
+                <div class="focus-card-item">
+                    <div class="focus-icon-box"><i class="fa-solid fa-bell"></i></div>
+                    <div>
+                        <h4>Kesadaran Dini</h4>
+                        <p>Mendorong masyarakat agar tidak mengabaikan gejala dan lebih peduli terhadap kondisi kesehatan pernapasan.</p>
+                    </div>
                 </div>
-                <div class="inner-sub-card">
-                    <h4>Generasi Sehat</h4>
-                    <p>Membangun kesadaran generasi muda untuk menjaga kesehatan pernapasan sebagai bagian dari gaya hidup sehat masa kini.</p>
+                <div class="focus-card-item">
+                    <div class="focus-icon-box"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <h4>Generasi Sehat</h4>
+                        <p>Membangun kesadaran generasi muda untuk menjaga kesehatan pernapasan sebagai bagian dari gaya hidup sehat masa kini.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- BOX 5: Nilai ISPARIVA -->
+        <!-- BOX 5: Nilai ISPARIVA (Disamakan seperti 114: Grid 4 Kolom Sejajar dengan Ikon Bulat di Atas) -->
         <div class="content-card-box">
-            <span class="sub-tag" style="margin-bottom: 5px;">Prinsip Kami</span>
-            <h3>Nilai ISPARIVA</h3>
+            <span class="sub-tag" style="margin-bottom: 5px; display: block;">Prinsip Kami</span>
+            <h3 style="margin-bottom: 20px;">Nilai ISPARIVA</h3>
             
-            <div class="grid-cards-2">
-                <div class="inner-sub-card" style="border-left-color: #0288d1;">
+            <div class="grid-values-4">
+                <div class="value-card-item">
+                    <div class="value-icon-circle"><i class="fa-solid fa-circle-check"></i></div>
                     <h4>Terpercaya</h4>
                     <p>Informasi disusun dengan mengutamakan sumber dan edukasi kesehatan yang dapat dipertanggungjawabkan.</p>
                 </div>
-                <div class="inner-sub-card" style="border-left-color: #0288d1;">
+                <div class="value-card-item">
+                    <div class="value-icon-circle"><i class="fa-solid fa-face-smile"></i></div>
                     <h4>Mudah Dipahami</h4>
                     <p>Menggunakan bahasa yang sederhana, visual yang menarik, dan penyampaian yang dekat dengan keseharian.</p>
                 </div>
-                <div class="inner-sub-card" style="border-left-color: #0288d1;">
+                <div class="value-card-item">
+                    <div class="value-icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
                     <h4>Edukatif</h4>
                     <p>Tidak hanya memberikan informasi, tetapi juga mengajak masyarakat memahami pentingnya pencegahan.</p>
                 </div>
-                <div class="inner-sub-card" style="border-left-color: #0288d1;">
+                <div class="value-card-item">
+                    <div class="value-icon-circle"><i class="fa-solid fa-bullseye"></i></div>
                     <h4>Relevan</h4>
                     <p>Menghadirkan konten kesehatan yang sesuai dengan kebutuhan dan kehidupan generasi masa kini.</p>
                 </div>
             </div>
         </div>
 
-        <!-- BOX 6: Bersama ISPARIVA (Penutup) -->
-        <div class="content-card-box" style="text-align: center; background: linear-gradient(135deg, #E3F2FD 0%, #E8F5E9 100%);">
-            <h3 style="color: #0d47a1;">Bersama ISPARIVA</h3>
-            <h4 style="color: #0288d1; margin-bottom: 15px; font-weight: 600;">Menuju Generasi yang Lebih Peduli Kesehatan Pernapasan.</h4>
-            <p style="max-width: 750px; margin: 0 auto 20px auto;">
-                Kesehatan pernapasan merupakan bagian penting dari kehidupan sehari-hari. Dengan mengenali gejala, memahami cara pencegahan, dan menerapkan kebiasaan sehat, kita dapat lebih peduli terhadap kesehatan diri sendiri maupun orang di sekitar. Yuk, mulai dari langkah kecil bersama ISPARIVA.
-            </p>
-            <p style="font-weight: bold; color: #0d47a1; font-size: 1rem; margin: 0;">
-                Kenali Gejalanya → Cegah Penyebarannya → Jaga Pernapasannya → Hidup Lebih Sehat
-            </p>
+        <!-- BOX 6: Bersama ISPARIVA (Disamakan seperti 444: Box Biru Lebar dengan Ruang Maskot Kanan) -->
+        <div class="together-box">
+            <div class="together-content">
+                <h3>Bersama ISPARIVA</h3>
+                <h4>Menuju Generasi yang Lebih Peduli Kesehatan Pernapasan.</h4>
+                <p>
+                    Kesehatan pernapasan merupakan bagian penting dari kehidupan sehari-hari. Dengan mengenali gejala, memahami cara pencegahan, dan menerapkan kebiasaan sehat, kita dapat lebih peduli terhadap kesehatan diri sendiri maupun orang di sekitar. Yuk, mulai dari langkah kecil bersama ISPARIVA.
+                </p>
+                <div class="together-steps">
+                    Kenali Gejalanya → Cegah Penyebarannya → Jaga Pernapasannya → Hidup Lebih Sehat
+                </div>
+            </div>
+            <div class="together-mascot">
+                <i class="fa-solid fa-robot" style="font-size: 2.5rem; margin-bottom: 8px; display: block;"></i>
+                <span>Maskot Ajakan ISPARIVA</span>
+            </div>
         </div>
 
         <!-- BOX 7: Afiliasi Institusi & G-Loop Method -->
@@ -514,37 +637,34 @@
 
     </div>
 
-     <footer style="background: #FFFFFF; color: #333333; padding: 50px 40px 25px 40px; margin-top: 80px; border-top: 1px solid #EAEAEA;">
-        <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 40px; padding-bottom: 35px; border-bottom: 1px solid #EAEAEA; align-items: start; text-align: left;">
-            
-            <!-- Kolom 1: Logo & Tagline -->
-            <div>
+    <!-- Footer Rapi Sesuai Referensi (Hanya Instagram) -->
+    <footer class="new-footer">
+        <div class="footer-container">
+            <div class="footer-col">
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
                     <img src="assets/img/logo.png" alt="ISPARIVA Logo" style="height: 24px; width: auto; object-fit: contain;">
                     <span style="font-weight: 700; color: #002d72; font-size: 1rem;">ISPARIVA Logo</span>
                 </div>
-                <p style="font-size: 0.9rem; color: #555555; line-height: 1.5; margin: 0 0 12px 0;">Informasi Sehat Pencegahan dan Respons Infeksi Respirasi yang Akurat.</p>
-                <p style="color: #00875a; font-weight: 700; margin: 0; font-size: 0.9rem;">"Kenali. Cegah. Jaga Pernapasan."</p>
+                <p>Informasi Sehat Pencegahan dan Respons Infeksi Respirasi yang Akurat.</p>
+                <p style="color: #00875a; font-weight: 700; margin: 0;">"Kenali. Cegah. Jaga Pernapasan."</p>
             </div>
             
-            <!-- Kolom 2: Afiliasi Institusi -->
-            <div>
-                <h5 style="color: #002d72; font-size: 1rem; margin-top: 0; margin-bottom: 12px; font-weight: 700;">Afiliasi Institusi</h5>
-                <p style="font-size: 0.9rem; color: #555555; line-height: 1.5; margin: 0 0 4px 0;">Promosi Kesehatan</p>
-                <p style="font-size: 0.9rem; font-weight: 700; color: #002d72; margin: 0;">POLTEKKES KEMENKES BANDUNG</p>
+            <div class="footer-col">
+                <h5>Afiliasi Institusi</h5>
+                <p style="margin-bottom: 4px;">Promosi Kesehatan</p>
+                <p style="font-weight: 700; color: #002d72; margin: 0;">POLTEKKES KEMENKES BANDUNG</p>
             </div>
 
-            <div>
-                <h5 style="color: #002d72; font-size: 1rem; margin-top: 0; margin-bottom: 12px; font-weight: 700;">Media Sosial</h5>
-                <div style="display: flex; gap: 10px; margin-top: 8px; justify-content: flex-start;">
-                    <a href="https://www.instagram.com/ispa.riva?stkn=MTZ3aDNnMjVvY2Jsdg==" target="_blank" style="width: 40px; height: 40px; background: #F4FBF7; border: 1px solid #E2E8F0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #002d72; text-decoration: none;" title="Instagram">
+            <div class="footer-col">
+                <h5>Media Sosial</h5>
+                <div class="social-icons-flex">
+                    <a href="https://www.instagram.com/ispa.riva?stkn=MTZ3aDNnMjVvY2Jsdg==" target="_blank" class="social-icon-btn" title="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
             </div>
-
         </div>
-        <div style="text-align: center; padding-top: 20px; font-size: 0.85rem; color: #666666;">
+        <div class="footer-bottom">
             &copy; 2026 ISPARIVA. All rights reserved. Developed with G-Loop Method.
         </div>
     </footer>
