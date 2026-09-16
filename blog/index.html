@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Edukasi - ISPARIVA</title>
+    <!-- Perhatikan penggunaan "../" karena file ini berada di dalam folder blog -->
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
     <header>
-        <h2>ISPARIVA Hub</h2>
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../assets/img/logo.png" alt="Logo ISPARIVA" style="height: 45px; width: auto;">
+            </a>
+        </div>
         <nav>
             <a href="../index.html">Beranda</a>
-            <a href="index.html">Blog</a>
+            <a href="../tentang.html">Tentang Kami</a>
+            <a href="index.html" style="color: var(--secondary-blue);">Blog (Hub)</a>
         </nav>
     </header>
 
-    <div class="hero" style="padding: 30px;">
+    <div class="hero" style="padding: 40px 20px;">
         <h2>Pusat Artikel & Informasi Kesehatan</h2>
         <p>"Kenali ISPAnya, jaga napasnya."</p>
     </div>
@@ -25,12 +31,12 @@
         <div class="card">
             <h3>Gejala Awal ISPA pada Anak & Dewasa</h3>
             <p>Pelajari tanda-tanda awal infeksi saluran pernapasan agar penanganan lebih cepat...</p>
-            <a href="#" style="color: var(--secondary-blue); font-weight:bold;">Baca Artikel →</a>
+            <a href="#" style="color: var(--secondary-blue); font-weight:bold; display: inline-block; margin-top: 15px;">Baca Artikel →</a>
         </div>
-        <div class="card">
+        <div class="card" style="border-left-color: var(--teal);">
             <h3>Pentingnya Kualitas Udara Bersih</h3>
             <p>Bagaimana lingkungan sekitar memengaruhi kesehatan paru-paru dan pernapasan Anda...</p>
-            <a href="#" style="color: var(--secondary-blue); font-weight:bold;">Baca Artikel →</a>
+            <a href="#" style="color: var(--secondary-blue); font-weight:bold; display: inline-block; margin-top: 15px;">Baca Artikel →</a>
         </div>
     </div>
 
