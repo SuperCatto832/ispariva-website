@@ -14,7 +14,6 @@ body {
   padding: 0;
 }
 
-/* Header & Navbar Modern dengan Bingkai Logo Rapi */
 header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -37,14 +36,6 @@ header {
   box-shadow: inset 0 2px 4px rgba(255,255,255,0.6);
 }
 
-.logo img {
-  height: 40px !important;     /* Mengunci tinggi logo agar pas & tidak raksasa */
-  max-height: 40px !important;
-  width: auto !important;
-  object-fit: contain;
-  display: block;
-}
-
 nav a {
   margin-left: 25px;
   text-decoration: none;
@@ -58,7 +49,6 @@ nav a:hover, nav a.active {
   color: var(--primary-green);
 }
 
-/* Variasi Background Hero Berwarna-warni Ceria */
 .hero-blue {
   background: linear-gradient(135deg, #E3F2FD 0%, #B3E5FC 100%);
 }
@@ -94,7 +84,6 @@ nav a:hover, nav a.active {
   line-height: 1.6;
 }
 
-/* Panggung/Background Lingkaran Ceria untuk Maskot */
 .hero-image { flex: 1; text-align: center; }
 .mascot-circle-bg {
   display: inline-block;
@@ -117,7 +106,6 @@ nav a:hover, nav a.active {
   100% { transform: translateY(0px); }
 }
 
-/* Container & Cards */
 .container {
   max-width: 900px;
   margin: 50px auto;
@@ -144,7 +132,6 @@ nav a:hover, nav a.active {
   margin-top: 5px;
 }
 
-/* Banner Maskot dengan Background Variasi & Bingkai */
 .mascot-banner {
   display: flex;
   align-items: center;
@@ -181,7 +168,6 @@ nav a:hover, nav a.active {
   color: #555;
 }
 
-/* Card Grid Beranda */
 .card-grid {
   display: flex;
   justify-content: center;
@@ -215,7 +201,6 @@ nav a:hover, nav a.active {
   line-height: 1.5;
 }
 
-/* Tombol Ceria */
 .btn {
   display: inline-block;
   background: linear-gradient(135deg, var(--teal), var(--secondary-blue));
@@ -229,7 +214,6 @@ nav a:hover, nav a.active {
 }
 .btn:hover { opacity: 0.9; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 40px 20px;
