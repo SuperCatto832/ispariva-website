@@ -3,60 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - ISPARIVA</title>
+    <title>ISPARIVA - Informasi Sehat Pencegahan & Respons ISPA</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body {
-            background: linear-gradient(180deg, #F1F8E9 0%, #F4FBF7 100%);
-            color: #4a5568;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .main-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .hero-box {
-            background: #FFFFFF;
-            border-radius: 24px;
-            padding: 50px 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-            text-align: center;
-            margin-bottom: 35px;
-            border: 1px solid rgba(0,0,0,0.02);
-        }
-        .hero-box h1 {
-            color: #0d47a1;
-            font-size: 2.3rem;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: 800;
-        }
-        .hero-box p {
-            color: #555;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            max-width: 750px;
-            margin: 0 auto 25px auto;
-        }
-        .cta-btn {
-            background: #2e7d32;
-            color: #FFFFFF;
-            padding: 12px 28px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: background 0.2s;
-        }
-        .cta-btn:hover {
-            background: #1b5e20;
-        }
         /* Footer Sesuai Gambar Referensi */
         .new-footer {
             background: #FFFFFF;
@@ -117,6 +67,7 @@
             font-size: 0.85rem;
             color: #666666;
         }
+
         @media (max-width: 768px) {
             .footer-container { grid-template-columns: 1fr; gap: 30px; }
         }
@@ -124,29 +75,58 @@
 </head>
 <body>
 
-    <header style="background: #ffffff; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea;">
+    <header>
         <div class="logo-wrapper">
             <a href="index.html">
                 <img src="assets/img/logo.png" alt="Logo ISPARIVA" style="height: 38px; width: auto; display: block; object-fit: contain;">
             </a>
         </div>
-        <nav style="display: flex; gap: 25px;">
-            <a href="index.html" style="text-decoration: none; color: #0d47a1; font-weight: 700;">Beranda</a>
-            <a href="tentang.html" style="text-decoration: none; color: #555; font-weight: 500;">Tentang Kami</a>
-            <a href="blog/index.html" style="text-decoration: none; color: #555; font-weight: 500;">Artikel</a>
+        <nav>
+            <a href="index.html" class="active">Beranda</a>
+            <a href="tentang.html">Tentang Kami</a>
+            <a href="blog/index.html">Artikel</a>
         </nav>
     </header>
 
-    <div class="main-container">
-        <div class="hero-box">
-            <span style="color: #2e7d32; font-weight: 700; letter-spacing: 1.5px; font-size: 0.85rem; text-transform: uppercase; display: inline-block; margin-bottom: 8px;">Selamat Datang di ISPARIVA</span>
-            <h1>Pusat Edukasi & Pencegahan ISPA</h1>
-            <p>Platform edukasi kesehatan modern yang berfokus pada pencegahan, pemahaman gejala, serta penanganan awal Infeksi Saluran Pernapasan Akut (ISPA) untuk masyarakat.</p>
-            <a href="tentang.html" class="cta-btn"><i class="fa-solid fa-arrow-right"></i> Kenali ISPARIVA Lebih Dekat</a>
+    <section class="hero hero-blue">
+        <div class="hero-flex">
+            <div class="hero-text">
+                <h1>Kenali, Cegah, dan Jaga Pernapasan</h1>
+                <p>Platform edukasi kesehatan modern dari Poltekkes Bandung untuk pencegahan dan respons Infeksi Saluran Pernapasan Akut (ISPA).</p>
+                <a href="blog/index.html" class="btn">Mulai Baca Artikel</a>
+            </div>
+            <div class="hero-image">
+                <div class="mascot-circle-bg">
+                    <img src="assets/img/maskot5.png" alt="Maskot Semangat">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="max-width: 1000px; margin: 0 auto;">
+        <div class="card-grid">
+            <div class="card">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <div style="background: #E3F2FD; padding: 6px; border-radius: 50%;">
+                        <img src="assets/img/maskot3.jpg" alt="Maskot" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3 style="margin: 0;">Deteksi Dini</h3>
+                </div>
+                <p>Kenali tanda dan gejala awal gangguan saluran pernapasan dengan panduan terpercaya.</p>
+            </div>
+            <div class="card" style="border-left-color: var(--teal);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <div style="background: #E0F2F1; padding: 6px; border-radius: 50%;">
+                        <img src="assets/img/maskot3.jpg" alt="Maskot" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <h3 style="margin: 0;">Edukasi Interaktif</h3>
+                </div>
+                <p>Penyampaian informasi kesehatan yang ramah, ringan, dan mudah diterapkan sehari-hari.</p>
+            </div>
         </div>
     </div>
 
-    <!-- Footer Konsisten -->
+    <!-- Footer Baru Sesuai Referensi -->
     <footer class="new-footer">
         <div class="footer-container">
             <div class="footer-col">
