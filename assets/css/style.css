@@ -57,7 +57,7 @@ nav a {
 
 .card {
   background: #FFFFFF;
-  border-radius: 15px; /* Rounded style sesuai panduan */
+  border-radius: 15px;
   padding: 25px;
   width: 300px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -81,8 +81,30 @@ nav a {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px 20px;
   background: var(--primary-blue);
   color: #FFFFFF;
   margin-top: 40px;
+}
+
+.footer-social {
+  margin-bottom: 12px;
+}
+
+.footer-ig-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #E1306C;
+  color: #FFFFFF;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+.footer-ig-btn:hover {
+  opacity: 0.85;
 }
