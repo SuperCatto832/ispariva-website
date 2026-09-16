@@ -5,41 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISPARIVA - Informasi Sehat Pencegahan & Respons ISPA</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- FontAwesome untuk ikon Instagram -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .hero-flex {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1000px;
-            margin: 0 auto;
-            gap: 30px;
-            text-align: left;
-        }
-        .hero-text { flex: 1; }
-        .hero-image { flex: 1; text-align: center; }
-        .hero-image img { max-width: 240px; height: auto; animation: float 3s ease-in-out infinite; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.08)); }
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-        @media (max-width: 768px) {
-            .hero-flex { flex-direction: column; text-align: center; }
-        }
-    </style>
 </head>
 <body>
 
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="assets/img/logo.png" alt="Logo ISPARIVA" style="height: 45px; width: auto;">
+                <img src="assets/img/logo.png" alt="Logo ISPARIVA">
             </a>
         </div>
         <nav>
-            <a href="index.html" style="color: var(--secondary-blue);">Beranda</a>
+            <a href="index.html" class="active">Beranda</a>
             <a href="tentang.html">Tentang Kami</a>
             <a href="blog/index.html">Artikel</a>
         </nav>
@@ -49,40 +26,44 @@
         <div class="hero-flex">
             <div class="hero-text">
                 <h1>Kenali, Cegah, dan Jaga Pernapasan</h1>
-                <p>Platform edukasi kesehatan untuk pencegahan dan respons Infeksi Saluran Pernapasan Akut (ISPA).</p>
-                <a href="blog/index.html" class="btn">Mulai Edukasi</a>
+                <p>Platform edukasi kesehatan modern dari Poltekkes Bandung untuk pencegahan dan respons Infeksi Saluran Pernapasan Akut (ISPA).</p>
+                <a href="blog/index.html" class="btn">Mulai Baca Artikel</a>
             </div>
             <div class="hero-image">
-                <img src="assets/img/maskot.webp" alt="Maskot ISPARIVA">
+                <img src="assets/img/maskot5.png" alt="Maskot Semangat">
             </div>
         </div>
     </section>
 
-    <div class="card-container">
-        <div class="card">
-            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
-                <img src="assets/img/maskot.webp" alt="Maskot" style="width: 45px; height: auto;">
-                <h3 style="margin: 0; color: var(--primary-blue);">Deteksi Dini ISPA</h3>
+    <div style="max-width: 1000px; margin: 0 auto;">
+        <div class="card-grid">
+            <div class="card">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <img src="assets/img/maskot3.jpg" alt="Maskot" style="width: 40px; border-radius: 50%;">
+                    <h3 style="margin: 0;">Deteksi Dini</h3>
+                </div>
+                <p>Kenali tanda dan gejala awal gangguan saluran pernapasan dengan panduan terpercaya.</p>
             </div>
-            <p>Kenali gejala awal saluran pernapasan dengan maskot interaktif dan panduan medis terpercaya.</p>
-        </div>
-        <div class="card" style="border-left-color: var(--teal);">
-            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
-                <img src="assets/img/maskot.webp" alt="Maskot" style="width: 45px; height: auto;">
-                <h3 style="margin: 0; color: var(--primary-blue);">Sistem Hub-and-Spoke</h3>
+            <div class="card" style="border-left-color: var(--teal);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
+                    <img src="assets/img/maskot3.jpg" alt="Maskot" style="width: 40px; border-radius: 50%;">
+                    <h3 style="margin: 0;">Edukasi Interaktif</h3>
+                </div>
+                <p>Penyampaian informasi kesehatan yang ramah, ringan, dan mudah diterapkan sehari-hari.</p>
             </div>
-            <p>Edukasi terstruktur dari pusat informasi blog ke berbagai artikel pencegahan harian.</p>
         </div>
     </div>
 
-    <!-- FOOTER DENGAN TOMBOL INSTAGRAM -->
     <footer>
+        <div style="margin-bottom: 15px;">
+            <img src="assets/img/maskot3.jpg" alt="Maskot" style="width: 65px; height: 65px; border-radius: 50%; object-fit: cover; border: 2px solid white;">
+        </div>
         <div class="footer-social">
-            <a href="https://instagram.com/ispa.riva" target="_blank" class="footer-ig-btn">
+            <a href="https://www.instagram.com/ispa.riva?stkn=MTZ3aDNnMjVvY2Jsdg==" target="_blank" class="footer-ig-btn">
                 <i class="fa-brands fa-instagram"></i> Kunjungi Instagram Kami
             </a>
         </div>
-        <p>&copy; 2026 ISPARIVA - Poltekkes Bandung</p>
+        <p>&copy; 2026 ISPARIVA - Promosi Kesehatan Poltekkes Bandung</p>
     </footer>
 
 </body>
