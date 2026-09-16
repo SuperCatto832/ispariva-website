@@ -7,100 +7,92 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .article-list { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
+        body {
+            background: linear-gradient(180deg, #F1F8E9 0%, #F4FBF7 100%);
+            color: #4a5568;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-title span {
+            color: #2e7d32;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+        .section-title h2 {
+            color: #0d47a1;
+            font-size: 2.2rem;
+            margin-top: 5px;
+            margin-bottom: 0;
+            font-weight: 800;
+        }
+        .mascot-banner {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 25px 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+            margin-bottom: 30px;
+            border-left: 6px solid #2e7d32;
+        }
+        .mascot-badge-box img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .mascot-banner h4 {
+            color: #0d47a1;
+            margin: 0 0 5px 0;
+            font-size: 1.1rem;
+        }
+        .mascot-banner p {
+            margin: 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+        .article-list { display: flex; flex-direction: column; gap: 15px; }
         .article-item {
             display: flex; align-items: center; justify-content: space-between;
             padding: 20px 25px; background: #FFFFFF; border: 1px solid #EAEAEA;
             border-radius: 15px; text-decoration: none; color: inherit; transition: all 0.25s ease;
         }
         .article-item:hover {
-            background: #EDE7F6; border-color: #7E57C2;
+            background: #F0F7FF; border-color: #0288d1;
             transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         }
         .article-left { display: flex; align-items: center; gap: 25px; }
-        .article-number { font-size: 1.25rem; font-weight: 700; color: #7E57C2; }
-        .article-info h4 { margin: 0 0 5px 0; color: var(--primary-blue); font-size: 1.05rem; }
+        .article-number { font-size: 1.25rem; font-weight: 700; color: #0288d1; }
+        .article-info h4 { margin: 0 0 5px 0; color: #0d47a1; font-size: 1.05rem; }
         .article-info p { margin: 0; font-size: 0.85rem; color: #666; }
-        .article-arrow { font-size: 1.1rem; color: var(--primary-blue); font-weight: bold; }
-
-        /* Footer Sesuai Gambar Referensi */
-        .new-footer {
-            background: #FFFFFF;
-            color: #333333;
-            padding: 50px 40px 25px 40px;
-            margin-top: 80px;
-            border-top: 1px solid #EAEAEA;
-        }
-        .footer-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1.2fr 1fr;
-            gap: 40px;
-            padding-bottom: 35px;
-            border-bottom: 1px solid #EAEAEA;
-            align-items: start;
-        }
-        .footer-col h5 {
-            color: #002d72;
-            font-size: 1rem;
-            margin-top: 0;
-            margin-bottom: 12px;
-            font-weight: 700;
-        }
-        .footer-col p {
-            font-size: 0.9rem;
-            color: #555555;
-            line-height: 1.5;
-            margin-bottom: 12px;
-            margin-top: 0;
-        }
-        .social-icons-flex {
-            display: flex;
-            gap: 10px;
-            margin-top: 8px;
-        }
-        .social-icon-btn {
-            width: 40px;
-            height: 40px;
-            background: #F4FBF7;
-            border: 1px solid #E2E8F0;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #002d72;
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-        .social-icon-btn:hover {
-            background: #002d72;
-            color: #FFFFFF;
-        }
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            font-size: 0.85rem;
-            color: #666666;
-        }
-
-        @media (max-width: 768px) {
-            .footer-container { grid-template-columns: 1fr; gap: 30px; }
-        }
+        .article-arrow { font-size: 1.1rem; color: #0d47a1; font-weight: bold; }
     </style>
 </head>
-<body style="background: linear-gradient(180deg, #EDE7F6 0%, #F4FBF7 100%);">
+<body>
 
-    <header>
+    <header style="background: #ffffff; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea;">
         <div class="logo-wrapper">
             <a href="../index.html">
                 <img src="../assets/img/logo.png" alt="Logo ISPARIVA" style="height: 38px; width: auto; display: block; object-fit: contain;">
             </a>
         </div>
-        <nav>
-            <a href="../index.html">Beranda</a>
-            <a href="../tentang.html">Tentang Kami</a>
-            <a href="index.html" class="active">Artikel</a>
+        <nav style="display: flex; gap: 25px;">
+            <a href="../index.html" style="text-decoration: none; color: #555; font-weight: 500;">Beranda</a>
+            <a href="../tentang.html" style="text-decoration: none; color: #555; font-weight: 500;">Tentang Kami</a>
+            <a href="index.html" style="text-decoration: none; color: #0d47a1; font-weight: 700;">Artikel</a>
         </nav>
     </header>
 
@@ -110,7 +102,7 @@
             <h2>Informasi Kesehatan</h2>
         </div>
 
-        <div class="mascot-banner banner-purple">
+        <div class="mascot-banner">
             <div class="mascot-badge-box">
                 <img src="../assets/img/maskot2.jpg" alt="Maskot Catatan">
             </div>
@@ -178,20 +170,19 @@
         </div>
     </div>
 
+    <!-- Footer Rapi (Hanya Instagram, Path Logo disesuaikan untuk folder blog) -->
     <footer style="background: #FFFFFF; color: #333333; padding: 50px 40px 25px 40px; margin-top: 80px; border-top: 1px solid #EAEAEA;">
         <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 40px; padding-bottom: 35px; border-bottom: 1px solid #EAEAEA; align-items: start; text-align: left;">
             
-            <!-- Kolom 1: Logo & Tagline -->
             <div>
                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-                    <img src="assets/img/logo.png" alt="ISPARIVA Logo" style="height: 24px; width: auto; object-fit: contain;">
+                    <img src="../assets/img/logo.png" alt="ISPARIVA Logo" style="height: 24px; width: auto; object-fit: contain;">
                     <span style="font-weight: 700; color: #002d72; font-size: 1rem;">ISPARIVA Logo</span>
                 </div>
                 <p style="font-size: 0.9rem; color: #555555; line-height: 1.5; margin: 0 0 12px 0;">Informasi Sehat Pencegahan dan Respons Infeksi Respirasi yang Akurat.</p>
                 <p style="color: #00875a; font-weight: 700; margin: 0; font-size: 0.9rem;">"Kenali. Cegah. Jaga Pernapasan."</p>
             </div>
             
-            <!-- Kolom 2: Afiliasi Institusi -->
             <div>
                 <h5 style="color: #002d72; font-size: 1rem; margin-top: 0; margin-bottom: 12px; font-weight: 700;">Afiliasi Institusi</h5>
                 <p style="font-size: 0.9rem; color: #555555; line-height: 1.5; margin: 0 0 4px 0;">Promosi Kesehatan</p>
