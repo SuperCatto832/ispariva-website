@@ -14,13 +14,12 @@
             margin: 0;
             padding: 0;
         }
-        .container {
+        .main-container {
             max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
         }
-        /* Kotak Putih Utama dengan Space/Padding yang Lebih Lega */
-        .main-content-box {
+        .content-card-box {
             background: #FFFFFF;
             border-radius: 24px;
             padding: 50px 45px;
@@ -28,52 +27,73 @@
             margin-bottom: 35px;
             border: 1px solid rgba(0,0,0,0.02);
         }
-        .section-title {
+        .page-header-box {
             text-align: center;
             margin-bottom: 40px;
         }
-        .section-title span {
+        .page-header-box .sub-tag {
             color: #2e7d32;
             font-weight: 700;
             letter-spacing: 1.5px;
             font-size: 0.85rem;
             text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 8px;
         }
-        .section-title h2 {
+        .page-header-box h1 {
             color: #0d47a1;
             font-size: 2.2rem;
-            margin-top: 5px;
-            margin-bottom: 0;
+            margin: 0;
             font-weight: 800;
         }
+        /* Banner Maskot dengan Latar Belakang Lingkaran Penopang */
         .mascot-banner {
             background: #F8FBF9;
             border-radius: 18px;
-            padding: 25px 30px;
+            padding: 30px;
             display: flex;
             align-items: center;
+            justify-content: space-between;
             gap: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             margin-bottom: 30px;
             border: 1px solid #E2E8F0;
             border-left: 6px solid #2e7d32;
         }
-        .mascot-badge-box img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
+        .mascot-banner-text {
+            flex-grow: 1;
         }
         .mascot-banner h4 {
             color: #0d47a1;
             margin: 0 0 5px 0;
-            font-size: 1.1rem;
+            font-size: 1.15rem;
+            font-weight: 700;
         }
         .mascot-banner p {
             margin: 0;
             color: #555;
             font-size: 0.95rem;
+            line-height: 1.5;
         }
+        .mascot-circle-bg {
+            flex-shrink: 0;
+            width: 100px;
+            height: 100px;
+            background: #E8F5E9;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .mascot-circle-bg img {
+            max-height: 115px;
+            width: auto;
+            position: absolute;
+            bottom: 0;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+        }
+
         .article-list { display: flex; flex-direction: column; gap: 15px; }
         .article-item {
             display: flex; align-items: center; justify-content: space-between;
@@ -106,23 +126,22 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="main-container">
         
-        <!-- Kotak Putih Utama yang Dilonggarkan Spacenya -->
-        <div class="main-content-box">
+        <div class="content-card-box">
             
-            <div class="section-title">
-                <span>Artikel & Wawasan</span>
-                <h2>Informasi Kesehatan</h2>
+            <div class="page-header-box">
+                <span class="sub-tag">Artikel & Wawasan</span>
+                <h1>Informasi Kesehatan</h1>
             </div>
 
             <div class="mascot-banner">
-                <div class="mascot-badge-box">
-                    <img src="../assets/img/maskot2.png" alt="Maskot Catatan">
-                </div>
-                <div>
+                <div class="mascot-banner-text">
                     <h4>Kumpulan Bacaan Pilihan</h4>
                     <p>Temukan berbagai artikel edukasi seputar pernapasan dan pencegahan ISPA yang disusun langsung oleh tim.</p>
+                </div>
+                <div class="mascot-circle-bg">
+                    <img src="../assets/img/maskot2.jpg" alt="Maskot Catatan">
                 </div>
             </div>
 
@@ -187,7 +206,7 @@
 
     </div>
 
-    <!-- Footer Rapi (Hanya Instagram, Path Logo disesuaikan untuk folder blog) -->
+    <!-- Footer Rapi (Hanya Instagram) -->
     <footer style="background: #FFFFFF; color: #333333; padding: 50px 40px 25px 40px; margin-top: 80px; border-top: 1px solid #EAEAEA;">
         <div style="max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 40px; padding-bottom: 35px; border-bottom: 1px solid #EAEAEA; align-items: start; text-align: left;">
             
