@@ -14,20 +14,20 @@
             border-radius: 15px; text-decoration: none; color: inherit; transition: all 0.25s ease;
         }
         .article-item:hover {
-            background: #F1F8E9; border-color: var(--teal);
+            background: #EDE7F6; border-color: #7E57C2;
             transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.03);
         }
         .article-left { display: flex; align-items: center; gap: 25px; }
-        .article-number { font-size: 1.25rem; font-weight: 700; color: var(--secondary-blue); }
+        .article-number { font-size: 1.25rem; font-weight: 700; color: #7E57C2; }
         .article-info h4 { margin: 0 0 5px 0; color: var(--primary-blue); font-size: 1.05rem; }
         .article-info p { margin: 0; font-size: 0.85rem; color: #666; }
         .article-arrow { font-size: 1.1rem; color: var(--primary-blue); font-weight: bold; }
     </style>
 </head>
-<body>
+<body style="background: linear-gradient(180deg, #EDE7F6 0%, #F4FBF7 100%);">
 
     <header>
-        <div class="logo">
+        <div class="logo-wrapper">
             <a href="../index.html">
                 <img src="../assets/img/logo.png" alt="Logo ISPARIVA">
             </a>
@@ -45,8 +45,10 @@
             <h2>Informasi Kesehatan</h2>
         </div>
 
-        <div class="mascot-banner" style="background: #E3F2FD; border-left-color: var(--secondary-blue);">
-            <img src="../assets/img/maskot2.png" alt="Maskot Catatan">
+        <div class="mascot-banner banner-purple">
+            <div class="mascot-badge-box">
+                <img src="../assets/img/maskot2.jpg" alt="Maskot Catatan">
+            </div>
             <div>
                 <h4>Kumpulan Bacaan Pilihan</h4>
                 <p>Temukan berbagai artikel edukasi seputar pernapasan dan pencegahan ISPA yang disusun langsung oleh tim.</p>
