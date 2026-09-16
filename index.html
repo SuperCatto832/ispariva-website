@@ -7,13 +7,109 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Perbaikan CSS agar maskot tidak terpotong dan lingkaran jadi background */
+        body {
+            background: linear-gradient(180deg, #F1F8E9 0%, #F4FBF7 100%);
+            color: #4a5568;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero Section Baru Ala 554 dengan Maskot Utuh */
+        .hero-section {
+            background: linear-gradient(135deg, #E3F2FD 0%, #E8F5E9 100%);
+            padding: 60px 40px;
+            border-bottom: 1px solid #EAEAEA;
+        }
+        .hero-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .hero-text-content {
+            max-width: 580px;
+        }
+        .hero-badge {
+            background: #E8F5E9;
+            color: #2e7d32;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 15px;
+            border: 1px solid #C8E6C9;
+        }
+        .hero-text-content h1 {
+            color: #0d47a1;
+            font-size: 2.3rem;
+            margin: 0 0 15px 0;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .hero-text-content h1 span {
+            color: #2e7d32;
+        }
+        .hero-text-content p {
+            color: #555555;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        .hero-btn {
+            background: #0d47a1;
+            color: #FFFFFF;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(13, 71, 161, 0.2);
+            transition: background 0.2s;
+        }
+        .hero-btn:hover {
+            background: #002d72;
+        }
+
+        /* Area Maskot Berjalan Tanpa Terpotong */
+        .hero-mascot-area {
+            flex-shrink: 0;
+            text-align: center;
+            position: relative;
+            width: 280px;
+            height: 280px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.03);
+            border: 2px dashed #B0BEC5;
+        }
+        .hero-mascot-area img {
+            max-height: 250px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.15));
+        }
+
+        /* Kartu Fitur di Bawah Hero */
+        .features-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
         .card-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
         }
         .card {
             background: #FFFFFF;
@@ -48,7 +144,7 @@
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.12));
         }
 
-        /* Footer Sesuai Gambar Referensi (Hanya Instagram) */
+        /* Footer Sesuai Referensi Rata Kiri (Hanya Instagram) */
         .new-footer {
             background: #FFFFFF;
             color: #333333;
@@ -112,6 +208,9 @@
         }
 
         @media (max-width: 768px) {
+            .hero-container { flex-direction: column; text-align: center; }
+            .hero-text-content { max-width: 100%; }
+            .hero-mascot-area { margin: 0 auto; }
             .card-grid { grid-template-columns: 1fr; }
             .footer-container { grid-template-columns: 1fr; gap: 30px; }
         }
@@ -119,35 +218,36 @@
 </head>
 <body>
 
-    <header>
+    <header style="background: #ffffff; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea;">
         <div class="logo-wrapper">
             <a href="index.html">
                 <img src="assets/img/logo.png" alt="Logo ISPARIVA" style="height: 38px; width: auto; display: block; object-fit: contain;">
             </a>
         </div>
-        <nav>
-            <a href="index.html" class="active">Beranda</a>
-            <a href="tentang.html">Tentang Kami</a>
-            <a href="blog/index.html">Artikel</a>
+        <nav style="display: flex; gap: 25px;">
+            <a href="index.html" style="text-decoration: none; color: #0d47a1; font-weight: 700;">Beranda</a>
+            <a href="tentang.html" style="text-decoration: none; color: #555; font-weight: 500;">Tentang Kami</a>
+            <a href="blog/index.html" style="text-decoration: none; color: #555; font-weight: 500;">Artikel</a>
         </nav>
     </header>
 
-    <section class="hero hero-blue">
-        <div class="hero-flex">
-            <div class="hero-text">
-                <h1>Kenali, Cegah, dan Jaga Pernapasan</h1>
-                <p>Platform edukasi kesehatan modern dari Poltekkes Bandung untuk pencegahan dan respons Infeksi Saluran Pernapasan Akut (ISPA).</p>
-                <a href="blog/index.html" class="btn">Mulai Baca Artikel</a>
+    <!-- Hero Section Baru -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-text-content">
+                <span class="hero-badge">Kenali, Cegah, dan Jaga Pernapasan</span>
+                <h1>ISPA BUKAN ALASAN, <br><span>NAPAS SEHAT</span> AKTIVITAS LANCAR!</h1>
+                <p>Tingkatkan kesadaran gejala ISPA sejak dini. Lindungi diri, keluarga, dan lingkungan dengan informasi kesehatan respirasi yang akurat dan terpercaya.</p>
+                <a href="blog/index.html" class="hero-btn">Jelajahi ISPARIVA <i class="fa-solid fa-arrow-down"></i></a>
             </div>
-            <div class="hero-image">
-                <div class="mascot-circle-bg" style="width: 150px; height: 150px; margin: 0 auto;">
-                    <img src="assets/img/maskot5.png" alt="Maskot Semangat" style="max-height: 165px;">
-                </div>
+            <div class="hero-mascot-area">
+                <img src="assets/img/maskot5.png" alt="Maskot ISPARIVA">
             </div>
         </div>
     </section>
 
-    <div style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+    <!-- Kartu Fitur Beranda -->
+    <div class="features-container">
         <div class="card-grid">
             <!-- Kartu 1: Deteksi Dini -->
             <div class="card">
@@ -155,7 +255,7 @@
                     <img src="assets/img/maskot3.jpg" alt="Maskot Deteksi Dini">
                 </div>
                 <div>
-                    <h3 style="color: var(--primary-blue); margin: 0 0 8px 0; font-size: 1.15rem;">Deteksi Dini</h3>
+                    <h3 style="color: #0d47a1; margin: 0 0 8px 0; font-size: 1.15rem;">Deteksi Dini</h3>
                     <p style="margin: 0; color: #555; font-size: 0.95rem; line-height: 1.5;">Kenali tanda dan gejala awal gangguan saluran pernapasan dengan panduan terpercaya.</p>
                 </div>
             </div>
@@ -166,14 +266,14 @@
                     <img src="assets/img/maskot3.jpg" alt="Maskot Edukasi Interaktif">
                 </div>
                 <div>
-                    <h3 style="color: var(--primary-blue); margin: 0 0 8px 0; font-size: 1.15rem;">Edukasi Interaktif</h3>
+                    <h3 style="color: #0d47a1; margin: 0 0 8px 0; font-size: 1.15rem;">Edukasi Interaktif</h3>
                     <p style="margin: 0; color: #555; font-size: 0.95rem; line-height: 1.5;">Penyampaian informasi kesehatan yang ramah, ringan, dan mudah diterapkan sehari-hari.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Footer Sesuai Referensi (3 Kolom, Tagline Hijau, Instagram Saja) -->
+    <!-- Footer Rapi Sesuai Referensi -->
     <footer class="new-footer">
         <div class="footer-container">
             <div class="footer-col">
