@@ -191,20 +191,21 @@
             line-height: 1.4;
         }
 
-        /* LAYOUT 444: Bersama ISPARIVA (Box Biru Lebar dengan Ruang Maskot Kanan) */
+        /* LAYOUT 444: Bersama ISPARIVA (Box Biru Lebar dengan Maskot di Kanan) */
         .together-box {
             background: #1565C0;
             border-radius: 24px;
-            padding: 45px 40px;
+            padding: 40px;
             color: #FFFFFF;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 10px 30px rgba(21, 101, 192, 0.2);
             margin-bottom: 35px;
+            gap: 30px;
         }
         .together-content {
-            max-width: 650px;
+            max-width: 620px;
         }
         .together-content h3 {
             color: #FFFFFF;
@@ -233,8 +234,14 @@
         }
         .together-mascot {
             text-align: center;
-            color: #90CAF9;
-            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .together-mascot img {
+            max-height: 180px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 8px 15px rgba(0,0,0,0.2));
         }
 
         /* Grid Tim Perancang */
@@ -516,7 +523,7 @@
             </div>
         </div>
 
-        <!-- BOX 6: Bersama ISPARIVA -->
+        <!-- BOX 6: Bersama ISPARIVA (Menggunakan maskot4.jpg) -->
         <div class="together-box">
             <div class="together-content">
                 <h3>Bersama ISPARIVA</h3>
@@ -529,15 +536,14 @@
                 </div>
             </div>
             <div class="together-mascot">
-                <i class="fa-solid fa-robot" style="font-size: 2.5rem; margin-bottom: 8px; display: block;"></i>
-                <span>Maskot Ajakan ISPARIVA</span>
+                <img src="assets/img/maskot4.png" alt="Maskot ISPARIVA">
             </div>
         </div>
 
-        <!-- BOX 7: Afiliasi Institusi (Teks G-Loop Dihilangkan, Ukuran Disesuaikan) -->
+        <!-- BOX 7: Afiliasi Institusi -->
         <div class="content-card-box" style="border-left: 5px solid #0288d1; padding: 30px 40px;">
             <h3 style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 1.2rem;">
-                <i class="fa-solid fa-building-columns" style="color: #0288d1;"></i> Afiliasi Institusi & G-Loop Method
+                <i class="fa-solid fa-building-columns" style="color: #0288d1;"></i> Afiliasi Institusi
             </h3>
             <p style="margin: 0;">
                 <strong>ISPARIVA</strong> bernaung di bawah <strong>Program Studi Sarjana Terapan Promosi Kesehatan POLTEKKES KEMENKES Bandung</strong>.
