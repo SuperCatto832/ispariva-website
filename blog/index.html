@@ -3,193 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artikel & Wawasan - ISPARIVA</title>
+    <title>Artikel Kesehatan - ISPARIVA</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .article-list { display: flex; flex-direction: column; gap: 15px; margin-top: 25px; }
-        .article-item {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 20px 25px; background: #FFFFFF; border: 1px solid #EAEAEA;
-            border-radius: 15px; text-decoration: none; color: inherit; transition: all 0.25s ease;
+        body {
+            background: linear-gradient(180deg, #F1F8E9 0%, #F4FBF7 100%);
+            color: #4a5568;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        .article-item:hover {
-            background: #EDE7F6; border-color: #7E57C2;
-            transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        .main-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
-        .article-left { display: flex; align-items: center; gap: 25px; }
-        .article-number { font-size: 1.25rem; font-weight: 700; color: #7E57C2; }
-        .article-info h4 { margin: 0 0 5px 0; color: var(--primary-blue); font-size: 1.05rem; }
-        .article-info p { margin: 0; font-size: 0.85rem; color: #666; }
-        .article-arrow { font-size: 1.1rem; color: var(--primary-blue); font-weight: bold; }
-
-        /* Footer Baru 3 Kolom */
+        .page-header-box {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .page-header-box h1 {
+            color: #0d47a1;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .article-card-box {
+            background: #FFFFFF;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
+            margin-bottom: 25px;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+        .article-card-box h3 {
+            color: #0d47a1;
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .article-card-box p {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        /* Footer Sesuai Gambar Referensi */
         .new-footer {
             background: #FFFFFF;
             color: #333333;
-            padding: 60px 40px 30px 40px;
+            padding: 50px 40px 25px 40px;
             margin-top: 80px;
             border-top: 1px solid #EAEAEA;
         }
         .footer-container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 2fr 1.2fr 1fr;
             gap: 40px;
-            padding-bottom: 40px;
+            padding-bottom: 35px;
             border-bottom: 1px solid #EAEAEA;
+            align-items: start;
         }
         .footer-col h5 {
-            color: var(--primary-blue);
+            color: #002d72;
             font-size: 1rem;
-            margin-bottom: 15px;
+            margin-top: 0;
+            margin-bottom: 12px;
             font-weight: 700;
         }
         .footer-col p {
             font-size: 0.9rem;
-            color: #666;
+            color: #555555;
             line-height: 1.5;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
+            margin-top: 0;
         }
         .social-icons-flex {
             display: flex;
-            gap: 12px;
-            margin-top: 10px;
+            gap: 10px;
+            margin-top: 8px;
         }
         .social-icon-btn {
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             background: #F4FBF7;
-            border: 1px solid #D0E8DD;
+            border: 1px solid #E2E8F0;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-blue);
+            color: #002d72;
             text-decoration: none;
             transition: all 0.2s;
         }
         .social-icon-btn:hover {
-            background: var(--primary-blue);
+            background: #002d72;
             color: #FFFFFF;
         }
         .footer-bottom {
             text-align: center;
-            padding-top: 25px;
+            padding-top: 20px;
             font-size: 0.85rem;
-            color: #777;
+            color: #666666;
         }
-
         @media (max-width: 768px) {
             .footer-container { grid-template-columns: 1fr; gap: 30px; }
         }
     </style>
 </head>
-<body style="background: linear-gradient(180deg, #EDE7F6 0%, #F4FBF7 100%);">
+<body>
 
-    <header>
+    <header style="background: #ffffff; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eaeaea;">
         <div class="logo-wrapper">
             <a href="../index.html">
                 <img src="../assets/img/logo.png" alt="Logo ISPARIVA" style="height: 38px; width: auto; display: block; object-fit: contain;">
             </a>
         </div>
-        <nav>
-            <a href="../index.html">Beranda</a>
-            <a href="../tentang.html">Tentang Kami</a>
-            <a href="index.html" class="active">Artikel</a>
+        <nav style="display: flex; gap: 25px;">
+            <a href="../index.html" style="text-decoration: none; color: #555; font-weight: 500;">Beranda</a>
+            <a href="../tentang.html" style="text-decoration: none; color: #555; font-weight: 500;">Tentang Kami</a>
+            <a href="index.html" style="text-decoration: none; color: #0d47a1; font-weight: 700;">Artikel</a>
         </nav>
     </header>
 
-    <div class="container">
-        <div class="section-title">
-            <span>Artikel & Wawasan</span>
-            <h2>Informasi Kesehatan</h2>
+    <div class="main-container">
+        <div class="page-header-box">
+            <span style="color: #2e7d32; font-weight: 700; letter-spacing: 1.5px; font-size: 0.85rem; text-transform: uppercase;">Edukasi & Informasi</span>
+            <h1>Artikel Kesehatan ISPA</h1>
+            <p>Kumpulan informasi, tips pencegahan, dan wawasan seputar kesehatan pernapasan.</p>
         </div>
 
-        <div class="mascot-banner banner-purple">
-            <div class="mascot-badge-box">
-                <img src="../assets/img/maskot2.jpg" alt="Maskot Catatan">
-            </div>
-            <div>
-                <h4>Kumpulan Bacaan Pilihan</h4>
-                <p>Temukan berbagai artikel edukasi seputar pernapasan dan pencegahan ISPA yang disusun langsung oleh tim.</p>
-            </div>
-        </div>
-
-        <div class="article-list">
-            <a href="https://www.kompasiana.com/refalina9107/6a959a35c925c41ec91c9dba/napasku-ketika-udara-yang-kita-hirup-bisa-mengganggu-pernapasan#goog_rewarded" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">01</span>
-                    <div class="article-info">
-                        <h4>Napasku Ketika Udara yang Kita Hirup Bisa Mengganggu Pernapasan</h4>
-                        <p>Oleh: Refalina Muhajidah Jaelani · Kompasiana</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-
-            <a href="https://www.kompasiana.com/refalina9107/6a93a5edc925c465ea0f6fc5/cuma-batuk-dan-pilek-kenali-ispa-sebelum-terlambat#goog_rewarded" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">02</span>
-                    <div class="article-info">
-                        <h4>Cuma Batuk dan Pilek? Kenali ISPA Sebelum Terlambat</h4>
-                        <p>Oleh: Refalina Muhajidah Jaelani · Kompasiana</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-
-            <a href="https://muhamadriko.substack.com/p/napas-sehat-dimulai-dari-kebiasaan-128" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">03</span>
-                    <div class="article-info">
-                        <h4>Napas Sehat Dimulai dari Kebiasaan</h4>
-                        <p>Oleh: Muhamad Riko Adzrik Fata · Substack</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-
-            <a href="https://medium.com/@ssyauqiyah14/tiap-hari-hirup-udara-tapi-udah-tahu-belum-apa-yang-masuk-ke-paru-paru-008df7e11b57" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">04</span>
-                    <div class="article-info">
-                        <h4>Tiap Hari Hirup Udara, tapi Udah Tahu Belum Apa yang Masuk ke Paru-Paru?</h4>
-                        <p>Oleh: Syifa Syauqiyah Sirojudin · Medium</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-
-            <a href="https://substack.com/@ahsania/note/c-324283430?utm_source=notes-share-action&r=8zjv13" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">05</span>
-                    <div class="article-info">
-                        <h4>Catatan Singkat Kesehatan Pernapasan & Pencegahan ISPA</h4>
-                        <p>Oleh: Ahsania Nadya Putri · Substack Note</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
+        <div class="article-card-box">
+            <h3>Mengenal Gejala Awal ISPA yang Sering Diabaikan</h3>
+            <p>Banyak orang mengira batuk dan pilek biasa sepele, padahal bisa jadi indikasi awal Infeksi Saluran Pernapasan Akut...</p>
+            <a href="#" style="color: #0d47a1; font-weight: 600; text-decoration: none;">Baca Selengkapnya &rarr;</a>
         </div>
     </div>
 
-    <!-- Footer Baru Sesuai Referensi -->
+    <!-- Footer Konsisten -->
     <footer class="new-footer">
         <div class="footer-container">
             <div class="footer-col">
-                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-                    <img src="../assets/img/logo.png" alt="ISPARIVA Logo" style="height: 32px; width: auto; object-fit: contain;">
-                    <span style="font-weight: 700; color: var(--primary-blue); font-size: 1.1rem;">ISPARIVA</span>
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                    <img src="../assets/img/logo.png" alt="ISPARIVA Logo" style="height: 24px; width: auto; object-fit: contain;">
+                    <span style="font-weight: 700; color: #002d72; font-size: 1rem;">ISPARIVA Logo</span>
                 </div>
                 <p>Informasi Sehat Pencegahan dan Respons Infeksi Respirasi yang Akurat.</p>
-                <p style="color: var(--primary-blue); font-weight: 600; font-style: italic; margin: 0;">"Kenali. Cegah. Jaga Pernapasan."</p>
+                <p style="color: #00875a; font-weight: 700; margin: 0;">"Kenali. Cegah. Jaga Pernapasan."</p>
             </div>
             
             <div class="footer-col">
                 <h5>Afiliasi Institusi</h5>
-                <p>Promosi Kesehatan<br><strong>POLTEKKES KEMENKES BANDUNG</strong></p>
+                <p style="margin-bottom: 4px;">Promosi Kesehatan</p>
+                <p style="font-weight: 700; color: #002d72; margin: 0;">POLTEKKES KEMENKES BANDUNG</p>
             </div>
 
             <div class="footer-col">
@@ -197,12 +167,6 @@
                 <div class="social-icons-flex">
                     <a href="https://www.instagram.com/ispa.riva?stkn=MTZ3aDNnMjVvY2Jsdg==" target="_blank" class="social-icon-btn" title="Instagram">
                         <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.tiktok.com" target="_blank" class="social-icon-btn" title="TikTok">
-                        <i class="fa-brands fa-tiktok"></i>
-                    </a>
-                    <a href="https://www.youtube.com" target="_blank" class="social-icon-btn" title="YouTube">
-                        <i class="fa-brands fa-youtube"></i>
                     </a>
                 </div>
             </div>
