@@ -6,6 +6,121 @@
     <title>Tentang Kami - ISPARIVA</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Style Tambahan Khusus Halaman Tentang Kami */
+        .info-card-top {
+            background: #FFFFFF;
+            border-left: 6px solid var(--secondary-blue);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            margin-bottom: 40px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .team-card {
+            background: #FFFFFF;
+            padding: 25px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+            border: 1px solid #EAEAEA;
+            transition: transform 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+        }
+        .team-avatar {
+            width: 70px;
+            height: 70px;
+            background: #E3F2FD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+            color: var(--secondary-blue);
+            font-size: 1.5rem;
+        }
+        .team-role {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            background: #E8F5E9;
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+        
+        /* Footer Baru 3 Kolom */
+        .new-footer {
+            background: #FFFFFF;
+            color: #333333;
+            padding: 60px 40px 30px 40px;
+            margin-top: 80px;
+            border-top: 1px solid #EAEAEA;
+        }
+        .footer-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #EAEAEA;
+        }
+        .footer-col h5 {
+            color: var(--primary-blue);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .footer-col p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .social-icons-flex {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .social-icon-btn {
+            width: 38px;
+            height: 38px;
+            background: #F4FBF7;
+            border: 1px solid #D0E8DD;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .social-icon-btn:hover {
+            background: var(--primary-blue);
+            color: #FFFFFF;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container { grid-template-columns: 1fr; gap: 30px; }
+        }
+    </style>
 </head>
 <body style="background: linear-gradient(180deg, #F1F8E9 0%, #F4FBF7 100%);">
 
@@ -23,72 +138,126 @@
     </header>
 
     <div class="container">
-        <div class="section-title">
-            <span>Mengenal Lebih Dekat</span>
-            <h2>Tentang ISPARIVA</h2>
-        </div>
-
-        <div class="mascot-banner banner-green">
-            <div class="mascot-badge-box">
-                <img src="assets/img/maskot1.png" alt="Maskot Membaca">
-            </div>
-            <div>
-                <h4>Belajar Kesehatan Jadi Lebih Seru!</h4>
-                <p>ISPARIVA hadir untuk mengedukasi masyarakat mengenai pentingnya pencegahan dan penanganan dini Infeksi Saluran Pernapasan Akut (ISPA).</p>
-            </div>
-        </div>
-
-        <h2>Apa Itu ISPARIVA?</h2>
-        <p>ISPARIVA merupakan platform edukasi kesehatan kolaboratif yang mengangkat isu pernapasan agar informasi medis dapat diakses, dipahami, dan diterapkan dengan mudah oleh masyarakat luas.</p>
         
-        <blockquote style="font-style: italic; color: var(--primary-blue); border-left: 4px solid var(--teal); margin: 25px 0; padding-left: 15px; font-weight: bold;">
-            "Napas sehat, aktivitas lancar."
-        </blockquote>
+        <!-- Kotak Afiliasi & G-Loop Method -->
+        <div class="info-card-top">
+            <h3 style="color: var(--primary-blue); margin-top: 0; display: flex; align-items: center; gap: 10px; font-size: 1.2rem;">
+                <i class="fa-solid fa-building-columns" style="color: var(--secondary-blue);"></i> Afiliasi Institusi & G-Loop Method
+            </h3>
+            <p style="color: #444; font-size: 0.95rem; line-height: 1.6; margin-bottom: 10px;">
+                <strong>ISPARIVA</strong> bernaung di bawah <strong>Program Studi Sarjana Terapan Promosi Kesehatan POLTEKKES KEMENKES Bandung</strong>.
+            </p>
+            <p style="color: #666; font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                Platform ini dikembangkan dengan menerapkan <strong>G-Loop Method</strong>, yaitu pendekatan ekosistem AI terpadu untuk menyebarkan informasi kesehatan secara akurat, terstruktur, dan berkelanjutan.
+            </p>
+        </div>
 
-        <h2 style="margin-top: 40px;">Tim Perancang ISPARIVA</h2>
-        <p style="font-size: 0.95rem; color: #555;">Mahasiswa Program Studi Promosi Kesehatan - Poltekkes Bandung:</p>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 25px;">
-            <div style="background: #E8F5E9; padding: 20px; border-radius: 15px; text-align: center; border-top: 4px solid var(--primary-green);">
-                <h4 style="color: var(--primary-blue); margin: 5px 0;">Ahsania Nadya Putri</h4>
-                <p style="font-size: 0.8rem; color: #555; margin-bottom: 12px;">Tim Perancang</p>
-                <a href="https://www.linkedin.com/in/ahsania-nadya-putri-bb6724437/" target="_blank" style="background:#0A66C2; color:white; padding:5px 12px; border-radius:15px; text-decoration:none; font-size:0.75rem;"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+        <div class="section-title" style="margin-bottom: 10px;">
+            <span style="color: var(--primary-green); font-weight: 700; letter-spacing: 1px; font-size: 0.85rem; text-transform: uppercase;">Human Entity</span>
+            <h2 style="color: var(--primary-blue); margin-top: 5px;">Tim Perancang ISPARIVA</h2>
+            <p style="color: #666; font-size: 0.95rem;">Mahasiswa Program Studi Promosi Kesehatan POLTEKKES Kemenkes Bandung</p>
+        </div>
+
+        <!-- Grid Tim Perancang -->
+        <div class="team-grid">
+            <!-- Anggota 1 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-user-gear"></i>
+                </div>
+                <h4 style="color: var(--primary-blue); margin: 0 0 4px 0; font-size: 1.05rem;">Ahsania Nadya Putri</h4>
+                <p style="font-size: 0.8rem; color: #777; margin: 0;">P17336124466</p>
+                <div class="team-role">Perancangan Konsep & Riset</div>
             </div>
-            <div style="background: #E8F5E9; padding: 20px; border-radius: 15px; text-align: center; border-top: 4px solid var(--primary-green);">
-                <h4 style="color: var(--primary-blue); margin: 5px 0;">Aura Nathania Azzahra Putri</h4>
-                <p style="font-size: 0.8rem; color: #555; margin-bottom: 12px;">Tim Perancang</p>
-                <a href="https://www.linkedin.com/in/aura-nathania-azzahra-93a570435/" target="_blank" style="background:#0A66C2; color:white; padding:5px 12px; border-radius:15px; text-decoration:none; font-size:0.75rem;"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+
+            <!-- Anggota 2 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h4 style="color: var(--primary-blue); margin: 0 0 4px 0; font-size: 1.05rem;">Aura Nathania Azzahra P.</h4>
+                <p style="font-size: 0.8rem; color: #777; margin: 0;">P17336124472</p>
+                <div class="team-role">Desain Visual & Brand</div>
             </div>
-            <div style="background: #E8F5E9; padding: 20px; border-radius: 15px; text-align: center; border-top: 4px solid var(--primary-green);">
-                <h4 style="color: var(--primary-blue); margin: 5px 0;">Ceyzhar Prima Pratama</h4>
-                <p style="font-size: 0.8rem; color: #555; margin-bottom: 12px;">Tim Perancang</p>
-                <a href="https://www.linkedin.com/in/ceyzhar-pratama-380b91378/" target="_blank" style="background:#0A66C2; color:white; padding:5px 12px; border-radius:15px; text-decoration:none; font-size:0.75rem;"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+
+            <!-- Anggota 3 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h4 style="color: var(--primary-blue); margin: 0 0 4px 0; font-size: 1.05rem;">Ceyzhar Prima Pratama</h4>
+                <p style="font-size: 0.8rem; color: #777; margin: 0;">P17336124476</p>
+                <div class="team-role">Pengembangan Platform AI</div>
             </div>
-            <div style="background: #E8F5E9; padding: 20px; border-radius: 15px; text-align: center; border-top: 4px solid var(--primary-green);">
-                <h4 style="color: var(--primary-blue); margin: 5px 0;">Refalina Muhajidah Jaelani</h4>
-                <p style="font-size: 0.8rem; color: #555; margin-bottom: 12px;">Tim Perancang</p>
-                <a href="https://www.linkedin.com/in/refalina-muhajidah-7b2568435/" target="_blank" style="background:#0A66C2; color:white; padding:5px 12px; border-radius:15px; text-decoration:none; font-size:0.75rem;"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+
+            <!-- Anggota 4 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <h4 style="color: var(--primary-blue); margin: 0 0 4px 0; font-size: 1.05rem;">Refalina Muhajidah J.</h4>
+                <p style="font-size: 0.8rem; color: #777; margin: 0;">P17336124510</p>
+                <div class="team-role">Strategi Komunikasi</div>
             </div>
-            <div style="background: #E8F5E9; padding: 20px; border-radius: 15px; text-align: center; border-top: 4px solid var(--primary-green);">
-                <h4 style="color: var(--primary-blue); margin: 5px 0;">Syifa Syauqiyah Sirojudin</h4>
-                <p style="font-size: 0.8rem; color: #555; margin-bottom: 12px;">Tim Perancang</p>
-                <a href="https://www.linkedin.com/in/syifa-syauqiyah-799347435/" target="_blank" style="background:#0A66C2; color:white; padding:5px 12px; border-radius:15px; text-decoration:none; font-size:0.75rem;"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+
+            <!-- Anggota 5 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+                <h4 style="color: var(--primary-blue); margin: 0 0 4px 0; font-size: 1.05rem;">Syifa Syauqiyah S.</h4>
+                <p style="font-size: 0.8rem; color: #777; margin: 0;">P17336124518</p>
+                <div class="team-role">Evaluasi Program</div>
             </div>
-            <div style="background: #E8F5E9; padding: 20px; border-radius: 15px; text-align: center; border-top: 4px solid var(--primary-green);">
-                <h4 style="color: var(--primary-blue); margin: 5px 0;">Muhamad Riko Adzrik Fata</h4>
-                <p style="font-size: 0.8rem; color: #555; margin-bottom: 12px;">Tim Perancang</p>
-                <a href="https://www.linkedin.com/in/riko-fata-57534b435/" target="_blank" style="background:#0A66C2; color:white; padding:5px 12px; border-radius:15px; text-decoration:none; font-size:0.75rem;"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+
+            <!-- Anggota 6 -->
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h4 style="color: var(--primary-blue); margin: 0 0 4px 0; font-size: 1.05rem;">Muhamad Riko Adzrik F.</h4>
+                <p style="font-size: 0.8rem; color: #777; margin: 0;">P17336124524</p>
+                <div class="team-role">Manajemen Data</div>
             </div>
         </div>
+
     </div>
 
-    <footer>
-        <div class="footer-social">
-            <a href="https://www.instagram.com/ispa.riva?stkn=MTZ3aDNnMjVvY2Jsdg==" target="_blank" class="footer-ig-btn">
-                <i class="fa-brands fa-instagram"></i> Kunjungi Instagram Kami
-            </a>
+    <!-- Footer Baru Sesuai Referensi Gambar -->
+    <footer class="new-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                    <img src="assets/img/logo.png" alt="ISPARIVA Logo" style="height: 32px; width: auto; object-fit: contain;">
+                    <span style="font-weight: 700; color: var(--primary-blue); font-size: 1.1rem;">ISPARIVA</span>
+                </div>
+                <p>Informasi Sehat Pencegahan dan Respons Infeksi Respirasi yang Akurat.</p>
+                <p style="color: var(--primary-blue); font-weight: 600; font-style: italic; margin: 0;">"Kenali. Cegah. Jaga Pernapasan."</p>
+            </div>
+            
+            <div class="footer-col">
+                <h5>Afiliasi Institusi</h5>
+                <p>Promosi Kesehatan<br><strong>POLTEKKES KEMENKES BANDUNG</strong></p>
+            </div>
+
+            <div class="footer-col">
+                <h5>Media Sosial</h5>
+                <div class="social-icons-flex">
+                    <a href="https://www.instagram.com/ispa.riva?stkn=MTZ3aDNnMjVvY2Jsdg==" target="_blank" class="social-icon-btn" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com" target="_blank" class="social-icon-btn" title="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="social-icon-btn" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <p>&copy; 2026 ISPARIVA - Poltekkes Bandung</p>
+        <div class="footer-bottom">
+            &copy; 2026 ISPARIVA. All rights reserved. Developed with G-Loop Method.
+        </div>
     </footer>
 
 </body>
