@@ -10,7 +10,7 @@
 <body>
 
     <header>
-        <div class="logo">
+        <div class="logo-wrapper">
             <a href="index.html">
                 <img src="assets/img/logo.png" alt="Logo ISPARIVA">
             </a>
@@ -22,7 +22,8 @@
         </nav>
     </header>
 
-    <section class="hero">
+    <!-- Hero dengan Background Variasi Biru Lembut -->
+    <section class="hero hero-blue">
         <div class="hero-flex">
             <div class="hero-text">
                 <h1>Kenali, Cegah, dan Jaga Pernapasan</h1>
@@ -30,7 +31,9 @@
                 <a href="blog/index.html" class="btn">Mulai Baca Artikel</a>
             </div>
             <div class="hero-image">
-                <img src="assets/img/maskot5.png" alt="Maskot Semangat">
+                <div class="mascot-circle-bg">
+                    <img src="assets/img/maskot5.png" alt="Maskot Semangat">
+                </div>
             </div>
         </div>
     </section>
@@ -39,14 +42,18 @@
         <div class="card-grid">
             <div class="card">
                 <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
-                    <img src="assets/img/maskot3.png" alt="Maskot" style="width: 40px; border-radius: 50%;">
+                    <div style="background: #E3F2FD; padding: 6px; border-radius: 50%;">
+                        <img src="assets/img/maskot3.jpg" alt="Maskot" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover;">
+                    </div>
                     <h3 style="margin: 0;">Deteksi Dini</h3>
                 </div>
                 <p>Kenali tanda dan gejala awal gangguan saluran pernapasan dengan panduan terpercaya.</p>
             </div>
             <div class="card" style="border-left-color: var(--teal);">
                 <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 10px;">
-                    <img src="assets/img/maskot3.png" alt="Maskot" style="width: 40px; border-radius: 50%;">
+                    <div style="background: #E0F2F1; padding: 6px; border-radius: 50%;">
+                        <img src="assets/img/maskot3.jpg" alt="Maskot" style="width: 35px; height: 35px; border-radius: 50%; object-fit: cover;">
+                    </div>
                     <h3 style="margin: 0;">Edukasi Interaktif</h3>
                 </div>
                 <p>Penyampaian informasi kesehatan yang ramah, ringan, dan mudah diterapkan sehari-hari.</p>
@@ -56,7 +63,9 @@
 
     <footer>
         <div style="margin-bottom: 15px;">
-            <img src="assets/img/maskot3.png" alt="Maskot" style="width: 65px; height: 65px; border-radius: 50%; object-fit: cover; border: 2px solid white;">
+            <div style="display: inline-block; background: rgba(255,255,255,0.15); padding: 8px; border-radius: 50%;">
+                <img src="assets/img/maskot3.jpg" alt="Maskot" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover;">
+            </div>
         </div>
         <div class="footer-social">
             <a href="https://www.instagram.com/ispa.riva?stkn=MTZ3aDNnMjVvY2Jsdg==" target="_blank" class="footer-ig-btn">
