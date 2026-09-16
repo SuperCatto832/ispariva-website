@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISPARIVA - Informasi Sehat Pencegahan & Respons ISPA</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .hero-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            gap: 30px;
+            text-align: left;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 220px;
+            height: auto;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        @media (max-width: 768px) {
+            .hero-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -15,34 +49,41 @@
             </a>
         </div>
         <nav>
-            <a href="index.html">Beranda</a>
+            <a href="index.html" style="color: var(--secondary-blue);">Beranda</a>
             <a href="tentang.html">Tentang Kami</a>
             <a href="blog/index.html">Blog (Hub)</a>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Kenali, Cegah, dan Jaga Pernapasan</h1>
-        <p>Platform edukasi kesehatan untuk pencegahan dan respons Infeksi Respirasi Akurat (ISPA).</p>
-        <a href="blog/index.html" class="btn">Mulai Edukasi</a>
+        <div class="hero-flex">
+            <div class="hero-text">
+                <h1>Kenali, Cegah, dan Jaga Pernapasan</h1>
+                <p>Platform edukasi kesehatan untuk pencegahan dan respons Infeksi Saluran Pernapasan Akut (ISPA)[cite: 1].</p>
+                <a href="blog/index.html" class="btn">Mulai Edukasi</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/img/maskot.webp" alt="Maskot ISPARIVA">
+            </div>
+        </div>
     </section>
 
     <div class="card-container">
-        <div class="card" style="text-align: center;">
-            <div style="margin-bottom: 15px;">
-                <img src="assets/img/maskot.webp" alt="Maskot ISPARIVA" style="width: 100px; height: auto;">
+        <div class="card">
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 12px;">
+                <img src="assets/img/maskot.webp" alt="Maskot" style="width: 50px; height: auto;">
+                <h3 style="margin: 0; color: var(--primary-blue);">Deteksi Dini ISPA</h3>
             </div>
-            <h3 style="text-align: left;">Deteksi Dini ISPA</h3>
-            <p style="text-align: left;">Kenali gejala awal saluran pernapasan dengan maskot interaktif dan panduan medis terpercaya.</p>
+            <p>Kenali gejala awal saluran pernapasan dengan maskot interaktif dan panduan medis terpercaya.</p>
         </div>
         <div class="card" style="border-left-color: var(--teal);">
             <h3>Sistem Hub-and-Spoke</h3>
-            <p>Edukasi terstruktur dari pusat informasi blog ke berbagai artikel pencegahan harian.</p>
+            <p>Edukasi terstruktur dari pusat informasi blog ke berbagai artikel pencegahan harian[cite: 1].</p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2026 ISPARIVA - Poltekkes Bandung</p>
+        <p>&copy; 2026 ISPARIVA - Poltekkes Bandung[cite: 1]</p>
     </footer>
 
 </body>
