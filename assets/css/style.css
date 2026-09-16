@@ -14,7 +14,7 @@ body {
   padding: 0;
 }
 
-/* Header & Navbar Modern dengan Logo Ber-background Lembut */
+/* Header & Navbar Modern dengan Bingkai Logo Rapi */
 header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
@@ -31,15 +31,17 @@ header {
 .logo-wrapper {
   background: linear-gradient(135deg, #E3F2FD, #E8F5E9);
   padding: 6px 14px;
-  border-radius: 16px;
+  border-radius: 14px;
   display: inline-flex;
   align-items: center;
   box-shadow: inset 0 2px 4px rgba(255,255,255,0.6);
 }
 
 .logo img {
-  height: 48px;
-  width: auto;
+  height: 40px !important;     /* Mengunci tinggi logo agar pas & tidak raksasa */
+  max-height: 40px !important;
+  width: auto !important;
+  object-fit: contain;
   display: block;
 }
 
@@ -56,15 +58,9 @@ nav a:hover, nav a.active {
   color: var(--primary-green);
 }
 
-/* Variasi Background Hero Berbeda-beda */
+/* Variasi Background Hero Berwarna-warni Ceria */
 .hero-blue {
   background: linear-gradient(135deg, #E3F2FD 0%, #B3E5FC 100%);
-}
-.hero-green {
-  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
-}
-.hero-purple {
-  background: linear-gradient(135deg, #EDE7F6 0%, #D1C4E9 100%);
 }
 
 .hero {
@@ -148,7 +144,7 @@ nav a:hover, nav a.active {
   margin-top: 5px;
 }
 
-/* Banner Maskot dengan Background Variasi & Bingkai Logo Kecil */
+/* Banner Maskot dengan Background Variasi & Bingkai */
 .mascot-banner {
   display: flex;
   align-items: center;
@@ -159,7 +155,6 @@ nav a:hover, nav a.active {
   box-shadow: 0 6px 20px rgba(0,0,0,0.03);
 }
 .banner-green { background: #E8F5E9; border-left: 6px solid var(--primary-green); }
-.banner-blue { background: #E3F2FD; border-left: 6px solid var(--secondary-blue); }
 .banner-purple { background: #EDE7F6; border-left: 6px solid #7E57C2; }
 
 .mascot-badge-box {
