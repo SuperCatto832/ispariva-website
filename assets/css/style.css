@@ -3,9 +3,7 @@
   --secondary-blue: #1976D2;
   --teal: #26C6DA;
   --primary-green: #43A047;
-  --light-green: #8BC34A;
-  --bg-color: #F4FBF7; /* Sedikit nuansa hijau-biru muda yang segar */
-  --card-bg: #FFFFFF;
+  --bg-color: #F4FBF7;
 }
 
 body {
@@ -16,11 +14,11 @@ body {
   padding: 0;
 }
 
-/* Header & Navbar Modern */
+/* Header & Navbar Modern dengan Logo Ber-background Lembut */
 header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  padding: 15px 40px;
+  padding: 12px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,9 +28,19 @@ header {
   z-index: 1000;
 }
 
+.logo-wrapper {
+  background: linear-gradient(135deg, #E3F2FD, #E8F5E9);
+  padding: 6px 14px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.6);
+}
+
 .logo img {
-  height: 52px; /* Logo diperbesar agar lebih menonjol */
+  height: 48px;
   width: auto;
+  display: block;
 }
 
 nav a {
@@ -48,11 +56,20 @@ nav a:hover, nav a.active {
   color: var(--primary-green);
 }
 
-/* Hero Section Ceria */
+/* Variasi Background Hero Berbeda-beda */
+.hero-blue {
+  background: linear-gradient(135deg, #E3F2FD 0%, #B3E5FC 100%);
+}
+.hero-green {
+  background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+}
+.hero-purple {
+  background: linear-gradient(135deg, #EDE7F6 0%, #D1C4E9 100%);
+}
+
 .hero {
   text-align: center;
   padding: 50px 20px 70px 20px;
-  background: linear-gradient(135deg, #E3F2FD 0%, #E8F5E9 100%);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
@@ -81,12 +98,21 @@ nav a:hover, nav a.active {
   line-height: 1.6;
 }
 
+/* Panggung/Background Lingkaran Ceria untuk Maskot */
 .hero-image { flex: 1; text-align: center; }
+.mascot-circle-bg {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 25px;
+  border-radius: 50%;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+  border: 4px dashed rgba(25, 118, 210, 0.2);
+}
 .hero-image img {
-  max-width: 260px;
+  max-width: 230px;
   height: auto;
   animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 12px 20px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.08));
 }
 
 @keyframes float {
@@ -99,7 +125,7 @@ nav a:hover, nav a.active {
 .container {
   max-width: 900px;
   margin: 50px auto;
-  background: var(--card-bg);
+  background: #FFFFFF;
   padding: 45px;
   border-radius: 30px;
   box-shadow: 0 10px 35px rgba(0,0,0,0.04);
@@ -122,19 +148,31 @@ nav a:hover, nav a.active {
   margin-top: 5px;
 }
 
-/* Banner Maskot Pembuka di Halaman */
+/* Banner Maskot dengan Background Variasi & Bingkai Logo Kecil */
 .mascot-banner {
   display: flex;
   align-items: center;
-  background: #E8F5E9;
   padding: 22px 28px;
   border-radius: 20px;
   gap: 22px;
   margin-bottom: 35px;
-  border-left: 6px solid var(--primary-green);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.03);
+}
+.banner-green { background: #E8F5E9; border-left: 6px solid var(--primary-green); }
+.banner-blue { background: #E3F2FD; border-left: 6px solid var(--secondary-blue); }
+.banner-purple { background: #EDE7F6; border-left: 6px solid #7E57C2; }
+
+.mascot-badge-box {
+  background: #FFFFFF;
+  padding: 10px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .mascot-banner img {
-  width: 75px;
+  width: 70px;
   height: auto;
 }
 .mascot-banner h4 {
