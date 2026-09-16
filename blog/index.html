@@ -19,6 +19,15 @@
             margin: 40px auto;
             padding: 0 20px;
         }
+        /* Kotak Putih Utama dengan Space/Padding yang Lebih Lega */
+        .main-content-box {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 50px 45px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+            margin-bottom: 35px;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
         .section-title {
             text-align: center;
             margin-bottom: 40px;
@@ -38,14 +47,15 @@
             font-weight: 800;
         }
         .mascot-banner {
-            background: #FFFFFF;
-            border-radius: 20px;
+            background: #F8FBF9;
+            border-radius: 18px;
             padding: 25px 30px;
             display: flex;
             align-items: center;
             gap: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
             margin-bottom: 30px;
+            border: 1px solid #E2E8F0;
             border-left: 6px solid #2e7d32;
         }
         .mascot-badge-box img {
@@ -97,77 +107,84 @@
     </header>
 
     <div class="container">
-        <div class="section-title">
-            <span>Artikel & Wawasan</span>
-            <h2>Informasi Kesehatan</h2>
-        </div>
-
-        <div class="mascot-banner">
-            <div class="mascot-badge-box">
-                <img src="../assets/img/maskot2.jpg" alt="Maskot Catatan">
+        
+        <!-- Kotak Putih Utama yang Dilonggarkan Spacenya -->
+        <div class="main-content-box">
+            
+            <div class="section-title">
+                <span>Artikel & Wawasan</span>
+                <h2>Informasi Kesehatan</h2>
             </div>
-            <div>
-                <h4>Kumpulan Bacaan Pilihan</h4>
-                <p>Temukan berbagai artikel edukasi seputar pernapasan dan pencegahan ISPA yang disusun langsung oleh tim.</p>
+
+            <div class="mascot-banner">
+                <div class="mascot-badge-box">
+                    <img src="../assets/img/maskot2.jpg" alt="Maskot Catatan">
+                </div>
+                <div>
+                    <h4>Kumpulan Bacaan Pilihan</h4>
+                    <p>Temukan berbagai artikel edukasi seputar pernapasan dan pencegahan ISPA yang disusun langsung oleh tim.</p>
+                </div>
             </div>
+
+            <div class="article-list">
+                <a href="https://www.kompasiana.com/refalina9107/6a959a35c925c41ec91c9dba/napasku-ketika-udara-yang-kita-hirup-bisa-mengganggu-pernapasan#goog_rewarded" target="_blank" class="article-item">
+                    <div class="article-left">
+                        <span class="article-number">01</span>
+                        <div class="article-info">
+                            <h4>Napasku Ketika Udara yang Kita Hirup Bisa Mengganggu Pernapasan</h4>
+                            <p>Oleh: Refalina Muhajidah Jaelani · Kompasiana</p>
+                        </div>
+                    </div>
+                    <div class="article-arrow">↗</div>
+                </a>
+
+                <a href="https://www.kompasiana.com/refalina9107/6a93a5edc925c465ea0f6fc5/cuma-batuk-dan-pilek-kenali-ispa-sebelum-terlambat#goog_rewarded" target="_blank" class="article-item">
+                    <div class="article-left">
+                        <span class="article-number">02</span>
+                        <div class="article-info">
+                            <h4>Cuma Batuk dan Pilek? Kenali ISPA Sebelum Terlambat</h4>
+                            <p>Oleh: Refalina Muhajidah Jaelani · Kompasiana</p>
+                        </div>
+                    </div>
+                    <div class="article-arrow">↗</div>
+                </a>
+
+                <a href="https://muhamadriko.substack.com/p/napas-sehat-dimulai-dari-kebiasaan-128" target="_blank" class="article-item">
+                    <div class="article-left">
+                        <span class="article-number">03</span>
+                        <div class="article-info">
+                            <h4>Napas Sehat Dimulai dari Kebiasaan</h4>
+                            <p>Oleh: Muhamad Riko Adzrik Fata · Substack</p>
+                        </div>
+                    </div>
+                    <div class="article-arrow">↗</div>
+                </a>
+
+                <a href="https://medium.com/@ssyauqiyah14/tiap-hari-hirup-udara-tapi-udah-tahu-belum-apa-yang-masuk-ke-paru-paru-008df7e11b57" target="_blank" class="article-item">
+                    <div class="article-left">
+                        <span class="article-number">04</span>
+                        <div class="article-info">
+                            <h4>Tiap Hari Hirup Udara, tapi Udah Tahu Belum Apa yang Masuk ke Paru-Paru?</h4>
+                            <p>Oleh: Syifa Syauqiyah Sirojudin · Medium</p>
+                        </div>
+                    </div>
+                    <div class="article-arrow">↗</div>
+                </a>
+
+                <a href="https://substack.com/@ahsania/note/c-324283430?utm_source=notes-share-action&r=8zjv13" target="_blank" class="article-item">
+                    <div class="article-left">
+                        <span class="article-number">05</span>
+                        <div class="article-info">
+                            <h4>Catatan Singkat Kesehatan Pernapasan & Pencegahan ISPA</h4>
+                            <p>Oleh: Ahsania Nadya Putri · Substack Note</p>
+                        </div>
+                    </div>
+                    <div class="article-arrow">↗</div>
+                </a>
+            </div>
+
         </div>
 
-        <div class="article-list">
-            <a href="https://www.kompasiana.com/refalina9107/6a959a35c925c41ec91c9dba/napasku-ketika-udara-yang-kita-hirup-bisa-mengganggu-pernapasan#goog_rewarded" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">01</span>
-                    <div class="article-info">
-                        <h4>Napasku Ketika Udara yang Kita Hirup Bisa Mengganggu Pernapasan</h4>
-                        <p>Oleh: Refalina Muhajidah Jaelani · Kompasiana</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-
-            <a href="https://www.kompasiana.com/refalina9107/6a93a5edc925c465ea0f6fc5/cuma-batuk-dan-pilek-kenali-ispa-sebelum-terlambat#goog_rewarded" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">02</span>
-                    <div class="article-info">
-                        <h4>Cuma Batuk dan Pilek? Kenali ISPA Sebelum Terlambat</h4>
-                        <p>Oleh: Refalina Muhajidah Jaelani · Kompasiana</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-
-            <a href="https://muhamadriko.substack.com/p/napas-sehat-dimulai-dari-kebiasaan-128" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">03</span>
-                    <div class="article-info">
-                        <h4>Napas Sehat Dimulai dari Kebiasaan</h4>
-                        <p>Oleh: Muhamad Riko Adzrik Fata · Substack</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-
-            <a href="https://medium.com/@ssyauqiyah14/tiap-hari-hirup-udara-tapi-udah-tahu-belum-apa-yang-masuk-ke-paru-paru-008df7e11b57" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">04</span>
-                    <div class="article-info">
-                        <h4>Tiap Hari Hirup Udara, tapi Udah Tahu Belum Apa yang Masuk ke Paru-Paru?</h4>
-                        <p>Oleh: Syifa Syauqiyah Sirojudin · Medium</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-
-            <a href="https://substack.com/@ahsania/note/c-324283430?utm_source=notes-share-action&r=8zjv13" target="_blank" class="article-item">
-                <div class="article-left">
-                    <span class="article-number">05</span>
-                    <div class="article-info">
-                        <h4>Catatan Singkat Kesehatan Pernapasan & Pencegahan ISPA</h4>
-                        <p>Oleh: Ahsania Nadya Putri · Substack Note</p>
-                    </div>
-                </div>
-                <div class="article-arrow">↗</div>
-            </a>
-        </div>
     </div>
 
     <!-- Footer Rapi (Hanya Instagram, Path Logo disesuaikan untuk folder blog) -->
